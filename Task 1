@@ -1,0 +1,17 @@
+//SPDX-License-Identifier: GPL-3.0 OR MIT
+pragma solidity >=0.7.0 <0.9.0;
+ contract Safe{
+    uint256 bankBalance;
+
+      function set(uint256 num) public  {
+        bankBalance = num;
+       }
+
+      function add(uint256 donation)public{
+        bankBalance += donation;
+       }
+
+      function retrieve() public view returns (uint256){
+        return bankBalance;
+       }
+}
